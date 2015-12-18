@@ -1,8 +1,6 @@
 # CoffeeLint - no-describe-only
 [![NPM Version](https://badge.fury.io/js/coffeelint-no-describe-only.svg)](https://npmjs.org/package/coffeelint-no-describe-only)
 
-> Validate a newline policy at the end of each file
-
 ## Description
 
 This [CoffeeLint](http://www.coffeelint.org) plugin verifies there are no `describe.only` in use. If you are using mocha, using `describe.only` is helpful when developing tests locally, but to avoid committing the `describe.only` and preventing the full test suite from being run in the future, you can use this coffeelint rule.
