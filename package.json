@@ -1,0 +1,32 @@
+{
+  "name": "coffeelint-no-describe-only",
+  "version": "0.0.1",
+  "description": "This CoffeeLint plugin verifies there are no describe.only's left in mocha tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers coffee:coffee-script/register test/RuleProcessor.test.coffee"
+  },
+  "author": "rkstedman",
+  "license": "MIT",
+  "devDependencies": {
+    "should": "^8.0.2"
+  },
+  "dependencies": {
+    "coffee-script": "^1.10.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rkstedman/coffeelint-no-describe-only.git"
+  },
+  "keywords": [
+    "coffeelint",
+    "mocha"
+  ],
+  "bugs": {
+    "url": "https://github.com/rkstedman/coffeelint-no-describe-only/issues"
+  },
+  "homepage": "https://github.com/rkstedman/coffeelint-no-describe-only#readme"
+}
