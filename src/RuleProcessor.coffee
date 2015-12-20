@@ -2,13 +2,15 @@
 class RuleProcessor
 
   rule:
-    name: 'no_describe_only'
-    description: 'Validates there are no describe.only calls'
+    name: 'no_mocha_only'
+    description: 'Validates there are no describe.only or it.only calls'
     level: 'error'
-    message: 'describe.only not allowed'
+    message: '.only not allowed'
 
   lintLine: ( line, lineApi ) ->
 
+    if /it\.only/.test line
+      return context: 'Unexpected it.only'
     if /describe\.only/.test line
       return context: 'Unexpected describe.only'
     else return null

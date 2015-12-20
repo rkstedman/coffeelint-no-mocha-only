@@ -7,8 +7,6 @@ describe 'RuleProcessor', () ->
 
   processor       = undefined         # populated in beforeEach()
   fakeAPI         = undefined         # populated in beforeEach()
-  setBehaviour    = ( behaviour ) ->  # A switch helper to modify the tested behaviour on the fly
-    fakeAPI.config[processor.rule.name].behaviour = behaviour
 
   # Setup function to be executed before each test
   beforeEach ->
@@ -24,13 +22,11 @@ describe 'RuleProcessor', () ->
   it 'should not trigger on lines with no describe.only if required', () ->
     result = processor.lintLine '', fakeAPI
     should.not.exist result
-  #
-  # it 'should not trigger on non-newline files if forbidden', () ->
-  #   setBehaviour 'forbid'  # Ensure that forbidding is set
-  #   result = processor.lintLine 'some content', fakeAPI
-  #   should.not.exist result
-  #
-  # it 'should trigger on newline files if forbidden', () ->
-  #   setBehaviour 'forbid'  # Ensure that forbidding is set
-  #   result = processor.lintLine '', fakeAPI
-  #   result.should.have.property 'context'
+
+  it 'should trigger on it.only if required', () ->
+    result = processor.lintLine 'it.only ->', fakeAPI
+    result.should.have.property 'context'
+
+  it 'should not trigger on lines with no it.only if required', () ->
+    result = processor.lintLine '', fakeAPI
+    should.not.exist result
