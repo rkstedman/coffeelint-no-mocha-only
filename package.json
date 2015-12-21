@@ -1,6 +1,6 @@
 {
   "name": "coffeelint-no-mocha-only",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "This CoffeeLint plugin verifies there are no describe.only's or it.only's left in mocha tests",
   "main": "index.js",
   "scripts": {
