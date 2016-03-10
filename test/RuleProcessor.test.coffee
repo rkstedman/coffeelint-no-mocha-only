@@ -23,6 +23,14 @@ describe 'RuleProcessor', () ->
     result = processor.lintLine '', fakeAPI
     should.not.exist result
 
+  it 'should trigger on context.only if required', () ->
+    result = processor.lintLine 'context.only ->', fakeAPI
+    result.should.have.property 'context'
+
+  it 'should not trigger on lines with no context.only if required', () ->
+    result = processor.lintLine '', fakeAPI
+    should.not.exist result
+
   it 'should trigger on it.only if required', () ->
     result = processor.lintLine 'it.only ->', fakeAPI
     result.should.have.property 'context'
