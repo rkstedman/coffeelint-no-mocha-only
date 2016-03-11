@@ -1,7 +1,7 @@
 {
   "name": "coffeelint-no-mocha-only",
-  "version": "1.0.0",
-  "description": "This CoffeeLint plugin verifies there are no describe.only's or it.only's left in mocha tests",
+  "version": "1.1.3",
+  "description": "This CoffeeLint plugin verifies there are no context.only's, describe.only's, or it.only's left in mocha tests",
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers coffee:coffee-script/register test/RuleProcessor.test.coffee"
@@ -19,14 +19,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rkstedman/coffeelint-no-mocha-only.git"
+    "url": "git+https://github.com/shyp/coffeelint-no-mocha-only.git"
   },
   "keywords": [
     "coffeelint",
     "mocha"
   ],
   "bugs": {
-    "url": "https://github.com/rkstedman/coffeelint-no-mocha-only/issues"
+    "url": "https://github.com/shyp/coffeelint-no-mocha-only/issues"
   },
-  "homepage": "https://github.com/rkstedman/coffeelint-no-mocha-only#readme"
+  "homepage": "https://github.com/shyp/coffeelint-no-mocha-only#readme"
 }

@@ -3,7 +3,7 @@
 
 ## Description
 
-This [CoffeeLint](http://www.coffeelint.org) plugin verifies there are no `describe.only` or `it.only` in use. If you are using mocha, using `describe.only` or `it.only` is helpful when developing tests locally, but to avoid committing the `only` usage and preventing the full test suite from being run in the future, you can use this coffeelint rule.
+This [CoffeeLint](http://www.coffeelint.org) plugin verifies there are no `context.only`, `describe.only`, or `it.only` in use. If you are using mocha, using `context.only`, `describe.only` or `it.only` is helpful when developing tests locally, but to avoid committing the `only` usage and preventing the full test suite from being run in the future, you can use this coffeelint rule.
 
 ## Installation
 
